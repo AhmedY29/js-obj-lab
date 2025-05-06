@@ -2,9 +2,9 @@ let book = {
   title: "رسائل من القرآن",
   author: "أحمد الصالح",
   year: "2024",
-  isAvailable: true,
+  isAvailable: false,
   borrow: () => {
-    book.isAvailable = false;
+    book.isAvailable = !book.isAvailable;
     return "Not Available";
   },
   publisher: {
