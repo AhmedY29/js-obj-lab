@@ -32,9 +32,6 @@ const movies = [
   { title: "Fight Club", director: "David Fincher", year: 1999, rating: 8.8 },
 ];
 
-// 4. احصل على الأفلام التي تم إصدارها قبل عام 2010.
-// 5. احصل على مصفوفة تحتوي فقط عناوين الأفلام.
-
 // 1. احصل على عنوان أول فيلم تم إصداره بعد عام 2000.
 let firstMovieAfter2000 = movies.find((e) => e.year > 2000);
 
@@ -44,3 +41,9 @@ console.log(firstMovieAfter2000);
 let firstMovieRateMore9 = movies.find((e) => e.rating > 9);
 
 console.log(firstMovieRateMore9);
+
+// 3. احصل على الأفلام التي أخرجها "Christopher Nolan" فقط.
+
+let moviesDirNolan = movies.filter((e) => e.director == "Christopher Nolan");
+
+console.log(moviesDirNolan);
