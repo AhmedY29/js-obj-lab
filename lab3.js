@@ -53,3 +53,9 @@ console.log(moviesDirNolan);
 let moviesBefore2010 = movies.filter((e) => e.year < 2010);
 
 console.log(moviesBefore2010);
+
+// 5. احصل على مصفوفة تحتوي فقط عناوين الأفلام.
+
+let moviesTitle = movies.map((e) => e.title);
+
+console.log(moviesTitle);
