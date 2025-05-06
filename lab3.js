@@ -59,3 +59,41 @@ console.log(moviesBefore2010);
 let moviesTitle = movies.map((e) => e.title);
 
 console.log(moviesTitle);
+
+// 6. احصل على متوسط تقييم جميع الأفلام.
+
+let avgRate = movies.reduce((sum, e) => sum + e.rating, 0) / movies.length;
+console.log(avgRate);
+
+// 7. قم بترتيب الأفلام حسب السنة (الأقدم إلى الأحدث).
+let sortByYear = movies.slice().sort((a, b) => a.year - b.year);
+
+console.log(sortByYear);
+
+// 8. قم بترتيب الأفلام حسب التقييم (من الأعلى إلى الأقل).
+
+let sortByRate = movies.slice().sort((a, b) => b.rating - a.rating);
+
+console.log(sortByRate);
+
+// 9. هل جميع الأفلام تقييمها أعلى من 8؟
+
+let moviesUp9Rate = movies.every((e) => e.rating < 8);
+
+console.log(moviesUp9Rate);
+
+// 10. هل يوجد فيلم واحد على الأقل تم إصداره في عام 1999؟
+
+let oneMovieBefore1999 = movies.some((e) => e.year == 1999);
+
+console.log(oneMovieBefore1999);
+
+// 11. هل جميع الأفلام أخرجها نفس المخرج؟
+let isMoviesSameDir = movies.every((e) => e.director == "rancis Ford Coppola");
+
+console.log(isMoviesSameDir);
+
+// 12. هل يوجد فيلم واحد على الأقل تقييمه أقل من 8.5؟
+let oneMovieRate = movies.some((e) => e.rating < 8.5);
+
+console.log(oneMovieRate);
