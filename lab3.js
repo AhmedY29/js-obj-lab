@@ -47,3 +47,9 @@ console.log(firstMovieRateMore9);
 let moviesDirNolan = movies.filter((e) => e.director == "Christopher Nolan");
 
 console.log(moviesDirNolan);
+
+// 4. احصل على الأفلام التي تم إصدارها قبل عام 2010.
+
+let moviesBefore2010 = movies.filter((e) => e.year < 2010);
+
+console.log(moviesBefore2010);
